@@ -6,14 +6,11 @@ $('body').append('<p>Dashboard data for the students</p>');
 $('body').append('<button>Click here to get started</button>');
 $('body').append('<p id="count"></p>');
 
+let count = $('#count').text() || 0;
 
 const updateCounter = ()=> {
-  let count = $('#count').text() || 0;
-  $('button').on('click', ()=> {
-    count++;
-    $('#count').text(`${count} clicks on the button`);
-  });
-};
+  count++;
+  $('#count').text(`${count} clicks on the button`);
+}
 
-_.debounce(updateCounter, 500);
-updateCounter();
+$('button').on('click', _.debounce(updateCounter, 500));
