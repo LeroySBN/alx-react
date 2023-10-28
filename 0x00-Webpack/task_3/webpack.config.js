@@ -1,35 +1,34 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   entry: {
     header: {
-      import: path.resolve(__dirname, './module/header/header.js'),
+      import: path.resolve(__dirname, './modules/header/header.js'),
       dependOn: 'shared',
     },
     body: {
-      import: path.resolve(__dirname, './module/body/body.js'),
+      import: path.resolve(__dirname, './modules/body/body.js'),
       dependOn: 'shared',
     },
     footer: {
-      import: path.resolve(__dirname, './module/footer/footer.js'),
+      import: path.resolve(__dirname, './modules/footer/footer.js'),
       dependOn: 'shared',
     },
+    shared: ['jquery'],
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
     filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'public'),
   },
   optimization: {
-    runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all',
     },
   },
   performance: {
-    hints: false,
-    maxEntrypointSize: 512000,
     maxAssetSize: 512000,
   },
   module: {
@@ -40,6 +39,7 @@ module.exports = {
       },
       { 
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: 'asset/resource',
         use: [
           "file-loader",
           {
@@ -56,16 +56,15 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Dev servers, modules, and tree shaking',
-      template: path.resolve(__dirname, './public/index.html'),
-      filename: 'index.html',
-      inject: 'body',
-    })
+      filename: path.resolve(__dirname, './public/index.html'),
+    }),
+    new CleanWebpackPlugin(),
   ],
+  devtool: 'inline-source-map',
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
+    static: path.join(__dirname, 'public'),
     compress: true,
+    open: true,
     port: 8564,
   },
 };
