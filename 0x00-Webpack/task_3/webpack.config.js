@@ -30,7 +30,9 @@ module.exports = {
     },
   },
   performance: {
+    // hints: false,
     maxAssetSize: 512000,
+    maxEntrypointSize: 512000,
   },
   module: {
     rules: [
