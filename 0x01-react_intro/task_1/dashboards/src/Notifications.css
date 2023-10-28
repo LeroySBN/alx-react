@@ -1,0 +1,13 @@
+.Notifications {
+  border: 2px solid #e1484a;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-family: Helvetica;
+  font-size: 20px;
+  color: #e1484a;
+  text-align: right;
+}
