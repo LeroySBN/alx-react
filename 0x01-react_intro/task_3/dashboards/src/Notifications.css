@@ -1,13 +1,16 @@
+:root {
+  --primary-color: #e1003c;
+  --border-box: 2px solid var(--primary-color);
+  --primary-font: Courier New, Courier, monospace;
+  --secondary-font: Helvetica, sans-serif;
+}
+
 .Notifications {
-  border: 2px solid #e1484a;
-  padding: 10px;
+  border: var(--border-box);
+  padding: 20px;
   margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  font-family: Helvetica;
-  font-size: 20px;
+  font-family: var(--secondary-font);
+  font-size: 1rem;
   color: #000000;
   text-align: left;
 }
@@ -21,6 +24,6 @@ li[data="urgent"] {
 }
 
 .Notifications img {
-  padding: 1rem;
+  margin: 20px;
   height: 1rem;
 }
