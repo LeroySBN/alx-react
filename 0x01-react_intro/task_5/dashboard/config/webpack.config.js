@@ -12,16 +12,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
-  performance: {
-    hints: false,
-    maxAssetSize: 512000,
-    maxEntrypointSize: 512000,
-  },
   module: {
     rules: [
       {
@@ -44,13 +34,6 @@ module.exports = {
       },
     ]
   },
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     title: 'React + Webpack',
-  //     filename: path.resolve(__dirname, './public/index.html'),
-  //   }),
-  //   new CleanWebpackPlugin(),
-  // ],
   devtool: 'inline-source-map',
   devServer: {
     static: path.join(__dirname, 'dist'),
