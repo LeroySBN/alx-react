@@ -4,11 +4,22 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: path.resolve(__dirname, './src/index.js'),
+  devtool: 'inline-source-map',
+  entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+  },
+  devServer: {
+    open: true,
+    hot: true,
+    static: path.resolve("./dist"),
+    compress: true,
+    port: 8564,
+  },
+  performance: {
+    maxAssetSize: 1000000,
+    maxEntrypointSize: 1000000,
   },
   module: {
     rules: [
@@ -31,13 +42,5 @@ module.exports = {
         ]
       },
     ]
-  },
-  devtool: 'inline-source-map',
-  devServer: {
-    hot: true,
-    static: path.join(__dirname, 'dist'),
-    compress: true,
-    open: true,
-    port: 8564,
   },
 };
