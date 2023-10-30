@@ -41,5 +41,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ]
   }
 }
