@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../assets/holberton-logo.jpg';
 import './App.css';
-import { getFooterCopy, getFullYear } from '..utils/utils';
+import { getFooterCopy, getFullYear } from '../utils/utils';
 
 function App() {
   const [selectedInput, setSelectedInput] = useState(null);
