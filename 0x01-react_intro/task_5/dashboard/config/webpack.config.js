@@ -9,6 +9,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve('./dist'),
+    publicPath: '/',
   },
   devServer: {
     static: path.resolve('./dist'),
@@ -48,14 +49,4 @@ module.exports = {
       },
     ]
   },
-  // resolve: {
-  //   extensions: [".*", ".js", ".jsx"],
-  // },
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     name: "index.html",
-  //     inject: false,
-  //     template: "./dist/index.html",
-  //   }),
-  // ],
 };
