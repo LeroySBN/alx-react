@@ -1,5 +1,5 @@
 const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -8,14 +8,14 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve('./dist'),
   },
   devServer: {
+    static: path.resolve('./dist'),
+    port: 8564,
+    compress: true,
     open: true,
     hot: true,
-    static: path.resolve("./dist"),
-    compress: true,
-    port: 8564,
   },
   performance: {
     maxAssetSize: 1000000,
@@ -43,4 +43,11 @@ module.exports = {
       },
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      name: "index.html",
+      inject: false,
+      template: "./dist/index.html",
+    }),
+  ],
 };
