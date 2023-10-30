@@ -3,6 +3,7 @@
   --border-style: 3px solid var(--primary-color);
   --primary-font: Courier New, Courier, monospace;
   --secondary-font: Helvetica, sans-serif;
+  --tertiary-font: Lora, serif;
 }
 
 .App {
@@ -14,6 +15,7 @@
 
 .App-header {
   display: flex;
+  font-family: var(--tertiary-font);
   font-size: 1.4rem;
   color: #e0354b;
   align-items: center;
