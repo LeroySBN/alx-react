@@ -1,26 +1,9 @@
+import React from 'react';
 import { shallow } from 'enzyme';
 // import { render, screen } from '@testing-library/react-18';
 import Notifications from './Notifications';
+// import { describe, expect } from '@jest/globals';
 
-// test('Notifications renders without crashing', () => {
-//   render(<Notifications />);
-//   const notificationsComponent = screen.getByTestId('Notifications');
-//   expect(notificationsComponent).toBeInTheDocument();
-// });
-
-// test('Notifications renders a list with three items', () => {
-//   render(<Notifications />);
-//   const notificationsItems = screen.getAllByRole('li');
-//   expect(notificationsItems).toHaveLength(3);
-// });
-
-// test('Notifications renders the text "Here is the list of notifications"', () => {
-//   render(<Notifications />);
-//   const notificationsParagraph = screen.getByText(
-//     'Here is the list of notifications'
-//   );
-//   expect(notificationsParagraph).toBeInTheDocument();
-// });
 
 describe('Notifications component testing', () => {
   it('Notifications renders without crashing', () => {

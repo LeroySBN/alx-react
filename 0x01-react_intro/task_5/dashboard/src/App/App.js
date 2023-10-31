@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import logo from './holberton-logo.jpg';
+import logoImage from '../assets/holberton-logo.jpg';
 import './App.css';
-import { getFooterCopy, getFullYear } from './utils';
+import { getFooterCopy, getFullYear } from '../utils/utils';
 
 function App() {
   const [selectedInput, setSelectedInput] = useState(null);
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
+        <img src={logoImage} className="App-logo" alt="logo"/>
         <h1>School dashboard</h1>
       </div>
       <div className="App-body">
