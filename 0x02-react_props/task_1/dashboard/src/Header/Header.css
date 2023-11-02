@@ -1,0 +1,21 @@
+:root {
+  --primary-color: #e1003c;
+  --border-style: 3px solid var(--primary-color);
+  --primary-font: Courier New, Courier, monospace;
+  --secondary-font: Helvetica, sans-serif;
+  --tertiary-font: Lora, serif;
+}
+
+.App-header {
+  display: flex;
+  font-family: var(--tertiary-font);
+  font-size: 1.4rem;
+  color: #e0354b;
+  align-items: center;
+  border-bottom: var(--border-style);
+}
+
+.App-header img {
+  width: 200px;
+  height: 200px;
+}
