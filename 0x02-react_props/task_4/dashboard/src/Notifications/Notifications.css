@@ -1,0 +1,35 @@
+:root {
+  --primary-color: #e1003c;
+  --border-box: 2px var(--primary-color) dotted;
+  --primary-font: Courier New, Courier, monospace;
+  --secondary-font: Helvetica, sans-serif;
+}
+
+.notificationContainer {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.Notifications {
+  border: var(--border-box);
+  padding: 8px;
+  margin: 0;
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  color: #000000;
+  text-align: left;
+}
+
+li[data-notification-type="default"] {
+  color: blue;
+}
+
+li[data-notification-type="urgent"] {
+  color: red;
+}
+
+.Notifications img {
+  margin: 0px;
+  height: 1rem;
+}
