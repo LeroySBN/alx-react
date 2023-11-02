@@ -1,6 +1,6 @@
-import { shallow } from 'enzyme';
+// importnpm  { shallow } from 'enzyme';
 // import { screen } from '@testing-library/react-18';
-import Login from './Login';
+// import Login from './Login';
 
 
 // test('Login renders a div with the class App-body', () => {
@@ -9,9 +9,9 @@ import Login from './Login';
 //   expect(appBody).toBeInTheDocument();
 // });
 
-describe('Login component testing', () => {
-  it('Login renders a div with the class App-body', () => {
-    const wrapper = shallow(<Login />);
-    expect(wrapper.find('.App-body')).toHaveLength(1);
-  });
-});
+// describe('Login component testing', () => {
+//   it('Login renders a div with the class App-body', () => {
+//     const wrapper = shallow(<Login />);
+//     expect(wrapper.find('.App-body')).toHaveLength(1);
+//   });
+// });

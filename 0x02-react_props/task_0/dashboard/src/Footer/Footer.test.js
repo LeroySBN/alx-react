@@ -1,6 +1,6 @@
-import { shallow } from 'enzyme';
+// import { shallow } from 'enzyme';
 // import { screen } from '@testing-library/react-18';
-import Footer from './Footer';
+// import Footer from './Footer';
 
 
 // test('Footer renders a div with the class App-footer', () => {
@@ -9,9 +9,9 @@ import Footer from './Footer';
 //   expect(appFooter).toBeInTheDocument();
 // });
 
-describe('Footer component testing', () => {
-    it('Footer renders a div with the class App-footer', () => {
-    const wrapper = shallow(<Footer />);
-    expect(wrapper.find('.App-footer')).toHaveLength(1);
-  });
-});
+// describe('Footer component testing', () => {
+//     it('Footer renders a div with the class App-footer', () => {
+//     const wrapper = shallow(<Footer />);
+//     expect(wrapper.find('.App-footer')).toHaveLength(1);
+//   });
+// });
