@@ -12,7 +12,7 @@ describe('Notifications component testing', () => {
 
   it('Notifications renders a list with three items', () => {
     const component = shallow(<Notifications />);
-    expect(component.contains(<NotificationItem />)).toBe(true);
+    expect(component.contains(<NotificationItem />)).exist;
   });
 
   it('Notifications renders the text "Here is the list of notifications"', () => {

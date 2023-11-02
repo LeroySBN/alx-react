@@ -15,11 +15,11 @@
   text-align: left;
 }
 
-li[data-priority="default"] {
+li[data-notification-type="default"] {
   color: blue;
 }
 
-li[data-priority="urgent"] {
+li[data-notification-type="urgent"] {
   color: red;
 }
 

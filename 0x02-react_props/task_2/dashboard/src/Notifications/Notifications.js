@@ -17,7 +17,9 @@ export default function Notifications() {
         </button>
         <p>Here is the list of notifications</p>
         <ul>
-          <NotificationItem />
+          <NotificationItem type="default" value="New course available" />
+          <NotificationItem type="default" value="New course available" />
+          <NotificationItem type="default" html={ getLatestNotification() } />
         </ul>
       </div>
     </>
