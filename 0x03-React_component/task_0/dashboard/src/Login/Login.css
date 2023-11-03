@@ -1,6 +1,8 @@
 :root {
   --primary-color: #e1003c;
-  --border-style: 3px solid var(--primary-color);
+  --secondary-color: #000000;
+  --primary-border-style: 3px solid var(--primary-color);
+  --secondary-border-style: 3px solid gray;
   --primary-font: Courier New, Courier, monospace;
   --secondary-font: Helvetica, sans-serif;
   --tertiary-font: Lora, serif;
@@ -13,9 +15,57 @@
   height: 45%;
 }
 
+.App-body p {
+  font-family: var(--tertiary-font);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
 .App-body form {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 1em;
+}
+
+.App-body form label {
+  font-family: var(--tertiary-font);
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+.App-body form input {
+  font-family: var(--tertiary-font);
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  border: var(--secondary-border-style);
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+.App-body button {
+  font-family: var(--tertiary-font);
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  border: var(--primary-border-style);
+  border-radius: 0.5em;
+  padding: 0.5em;
+  background-color: var(--primary-color);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .App-body {
+    padding: 1em; /* Adjust padding for smaller screens */
+  }
+
+  .App-body form {
+    flex-direction: column; /* Stack form items on smaller screens */
+  }
+
+  .App-body form label,
+  .App-body form input {
+    width: 100%; /* Make labels and inputs full width on smaller screens */
+  }
 }

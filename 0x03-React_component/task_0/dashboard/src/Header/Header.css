@@ -13,6 +13,7 @@
   color: #e0354b;
   align-items: center;
   border-bottom: var(--border-style);
+  z-index: 2;
 }
 
 .App-header img {

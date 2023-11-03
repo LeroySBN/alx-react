@@ -7,9 +7,13 @@
 }
 
 .App-footer {
+  position: fixed;
+  bottom: 0;
   border-top: var(--border-style);
   padding: 1.2rem;
   font-size: 1rem;
   text-align: center;
   font-style: italic;
+  background-color: white;
+  z-index: 1;
 }
