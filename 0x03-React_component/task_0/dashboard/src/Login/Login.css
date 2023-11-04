@@ -1,6 +1,7 @@
 :root {
   --primary-color: #e1003c;
   --secondary-color: #000000;
+  --tertiary-color: #ffffff;
   --primary-border-style: 3px solid var(--primary-color);
   --secondary-border-style: 3px solid gray;
   --primary-font: Courier New, Courier, monospace;
@@ -52,8 +53,14 @@
   border-radius: 0.5em;
   padding: 0.5em;
   background-color: var(--primary-color);
+  cursor: pointer;
 }
 
+.App-body button:hover {
+  color: var(--tertiary-color);
+  border: var(--primary-border-style);
+  background-color: var(--primary-color);
+}
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .App-body {
