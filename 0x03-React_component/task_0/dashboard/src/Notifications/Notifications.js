@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Notifications.css';
 import closeIcon from '../assets/close-icon.png';
-import { getLatestNotification } from '../utils/utils';
 import NotificationItem from './NotificationItem';
 import { NotificationItemShape } from './NotificationItemShape';
 
@@ -51,4 +50,5 @@ Notifications.propTypes = {
 
 Notifications.defaultProps = {
   displayDrawer: false,
+  listNotifications: [],
 };

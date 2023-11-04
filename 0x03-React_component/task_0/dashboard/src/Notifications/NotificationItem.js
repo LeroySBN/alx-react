@@ -1,13 +1,13 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from 'prop-types';
 
 
 export default function NotificationItem({ type, value, html }) {
   return (
-    <Fragment>
+    <React.Fragment>
       {type && value ? <li data-notification-type={type}>{value}</li> : null}
       {html ? <li data-notification-type="urgent" dangerouslySetInnerHTML={{__html: html}} /> : null}
-    </Fragment>
+    </React.Fragment>
   );
 }
 

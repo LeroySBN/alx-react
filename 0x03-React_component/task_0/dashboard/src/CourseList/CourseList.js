@@ -4,7 +4,7 @@ import CourseListRow from "./CourseListRow";
 import "./CourseList.css";
 import { CourseShape } from "./CourseShape";
 
-export default function CourseList({ listCourses }) {
+function CourseList({ listCourses }) {
   return (
     <table id="CourseList">
       <thead>
@@ -29,3 +29,5 @@ CourseList.propTypes = {
 CourseList.defaultProps = {
   listCourses: [],
 };
+
+export default CourseList;
