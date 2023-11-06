@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #e1003c;
+  --secondary-color: #000000;
+  --tertiary-color: #ffffff;
+  --primary-border-style: 3px solid var(--primary-color);
+  --secondary-border-style: 3px solid gray;
+  --primary-font: Courier New, Courier, monospace;
+  --secondary-font: Helvetica, sans-serif;
+  --tertiary-font: Lora, serif;
+}
+
+.bodySectionWithMargin {
+  margin-bottom: 40px;
+}

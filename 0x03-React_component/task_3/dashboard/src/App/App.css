@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #e1003c;
+  --border-style: 3px solid var(--primary-color);
+  --primary-font: Courier New, Courier, monospace;
+  --secondary-font: Helvetica, sans-serif;
+  --tertiary-font: Lora, serif;
+}
+
+.App {
+  height: 100vh;
+  max-width: 100vw;
+  font-family: var(--primary-font);
+  margin: 0 8px;
+}
