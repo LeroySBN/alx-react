@@ -22,10 +22,9 @@ class Notifications extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className={this.props.displayDrawer ? css(styles.fullWidth) : css(styles.notificationContainer)}>
-          <div className={this.props.displayDrawer ? css(styles.hide) : css(styles.show)}>
-            <p>Your notifications</p>
-          </div>
+        <div className={this.props.displayDrawer ? css(styles.hide) : css(styles.show)}>
+          <p>Your notifications</p>
+        </div>
           {this.props.displayDrawer ? (
             <div className={css(styles.Notifications)}>
               <button 
@@ -59,7 +58,6 @@ class Notifications extends React.Component {
           ) : (
             null
             )}
-        </div>
       </React.Fragment>
     );
   }
@@ -70,35 +68,59 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: '0.5rem',
     right: '0.5rem',
-    backgroundColor: '#ffffff',
-    boxShadow: '0px 0px 4px 2px rgba(0, 0, 0, 0.25)',
     padding: '4px 16px',
-  },
-  fullWidth: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
     backgroundColor: '#ffffff',
-    zIndex: '3',
+    '@media (max-width: 900px)': {
+      top: '0',
+      right: '0',
+      padding: '0',
+      width: '100%',
+      height: '100%',
+      zIndex: '3',
+    },
   },
   hide: {
     display: 'none',
   },
   show: {
     display: 'block',
+    position: 'absolute',
+    top: '0.5rem',
+    right: '0.5rem',
+    padding: '4px 16px',
   },
   Notifications: {
+    position: 'absolute',
+    top: '1rem',
+    right: '1em',
+    padding: '4px 16px',
+    border: '2px #e1003c dotted',
+    color: '#000000',
+    backgroundColor: '#ffffff',
     fontFamily: 'Helvetica, sans-serif',
+    fontSize: '1rem',
     textAlign: 'left',
+    '@media (max-width: 900px)': {
+      top: '0',
+      right: '0',
+      margin: '0',
+      padding: '0',
+      width: '100%',
+      height: '100%',
+      border: 'none',
+      zIndex: '3',
+    },
   },
   closeIcon: {
     margin: '0',
     height: '15px',
   },
   ul: {
-    listStyle: 'none',
-    padding: '0',
-    fontSize: '20px',
+    '@media (max-width: 900px)': {
+      listStyle: 'none',
+      padding: '0',
+      fontSize: '20px',
+    },
   }
 });
 

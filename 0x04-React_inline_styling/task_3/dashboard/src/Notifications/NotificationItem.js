@@ -33,15 +33,19 @@ class NotificationItem extends React.PureComponent {
 const styles = StyleSheet.create({
   default: {
     color: 'blue',
-    borderBottom: '1px solid black',
-    fontSize: '20px',
-    padding: '10px 8px',
+    '@media (max-width: 900px)': {
+      borderBottom: '1px solid black',
+      fontSize: '20px',
+      padding: '10px 8px',
+    },
   },
   urgent: {
     color: 'red',
-    borderBottom: '1px solid black',
-    fontSize: '20px',
-    padding: '10px 8px',
+    '@media (max-width: 900px)': {
+      borderBottom: '1px solid black',
+      fontSize: '20px',
+      padding: '10px 8px',
+    },
   },
 });
 
