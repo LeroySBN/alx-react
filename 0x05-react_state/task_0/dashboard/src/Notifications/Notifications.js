@@ -87,20 +87,6 @@ const translateKeyframes = {
   },
 };
 
-const colorKeyframes = {
-  '0%': {
-      color: '#ff0000',
-  },
-
-  '50%': {
-      color: '#00ff00',
-  },
-
-  '100%': {
-      color: '#0000ff',
-  },
-};
-
 const styles = StyleSheet.create({
   menuItem: {
     position: 'absolute',
@@ -110,8 +96,8 @@ const styles = StyleSheet.create({
     ':hover': {
       cursor: 'pointer',
       backgroundColor: '#fff8f8',
-      animationName: [opacityKeyframes, translateKeyframes, colorKeyframes],
-      animationDuration: '1s, 0.5s, 0.3s',
+      animationName: [opacityKeyframes, translateKeyframes],
+      animationDuration: '1s, 0.5s',
       animationIterationCount: '3',
     },
   },
