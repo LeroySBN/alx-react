@@ -17,7 +17,6 @@ class Notifications extends React.Component {
 
   shouldComponentUpdate(nextProps) {
     return nextProps.listNotifications.length > this.props.listNotifications.length;
-
   }
 
   render() {
@@ -32,7 +31,7 @@ class Notifications extends React.Component {
             <button 
               style={{ display: "flex", justifyContent: "flex-end", margin: "10px 10px 0 0", padding: "0", border: "none", cursor: "pointer", position: "absolute", top: "2px", right: "2px" }}
               aria-label="Close" 
-              onClick={this.props.handleHideDrawer}
+              onClick={this.props.handleHideDrawer()}
             >
               <img className={css(styles.closeIcon)} src={closeIcon} alt='closeIcon' />
             </button>
