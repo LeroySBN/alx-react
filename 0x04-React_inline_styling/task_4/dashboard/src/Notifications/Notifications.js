@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Helvetica, sans-serif',
     fontSize: '1rem',
     textAlign: 'left',
+    backgroundColor: '#fff8f8',
     '@media (max-width: 900px)': {
       top: '0',
       right: '0',
