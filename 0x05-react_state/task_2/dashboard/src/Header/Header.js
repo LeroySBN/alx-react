@@ -1,44 +1,26 @@
 import React, { Fragment } from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import PropTypes from 'prop-types';
 import { AppContext } from '../App/AppContext';
 import logo from '../assets/holberton-logo.jpg';
 
-export default class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+export default function Header() {
+  const { user, logOut } = React.useContext(AppContext);
 
-  render() {
-    const { user, logOut } = this.context;
-    return (
-      <Fragment>
-        <div className={css(styles['App-header'])} id='App-header'>
-          <img src={logo} className={css(styles.headerLogo)} alt="logo"/>
-          <h1 className={css(styles.headerTitle)}>School dashboard</h1>
-        </div>
+  return (
+    <Fragment>
+      <div className={css(styles['App-header'])} id='App-header'>
+        <img src={logo} className={css(styles.headerLogo)} alt="logo"/>
+        <h1 className={css(styles.headerTitle)}>School dashboard</h1>
+      </div>
 
-        {user.isLoggedIn && (
-          <p id="logoutSection">
-            Welcome <b>{user.email}</b> (<a href="#" onClick={logOut}>logout</a>)
-          </p>
-        )}
-      </Fragment>
-    );
-  };
+      {user.isLoggedIn && (
+        <p id="logoutSection">
+          Welcome <b>{user.email}</b> (<a href="#" onClick={logOut}>logout</a>)
+        </p>
+      )}
+    </Fragment>
+  );
 }
-
-Header.contextType = AppContext;
-
-Header.PropTypes = {
-  user: PropTypes.object,
-  logOut: PropTypes.func,
-};
-
-Header.defaultProps = {
-  user: null,
-  logOut: () => {},
-};
 
 const styles = StyleSheet.create({
   'App-header': {

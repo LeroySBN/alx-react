@@ -86,7 +86,7 @@ class App extends React.Component {
             listNotifications={this.listNotifications}
           />
           <div className={css(styles.App)}>
-            <Header user={this.context.user} logOut={this.context.logOut} />
+            <Header />
             {this.state.user.isLoggedIn ? ( 
               <BodySectionWithMarginBottom title="Course list">
                 <CourseList listCourses={this.listCourses} />
