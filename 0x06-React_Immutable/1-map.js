@@ -6,4 +6,3 @@ const getImmutableObject = (object) => Map(object);
 
 export default getImmutableObject;
 // module.exports = { getImmutableObject };
-
