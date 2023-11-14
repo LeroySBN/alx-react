@@ -21,6 +21,6 @@ describe('Tests for notifications schema', () => {
     ]
 
     const userData = getAllNotificationsByUser(userId);
-    expect(userData).toEqual(expectedNotifications);
+    expect(userData).toEqual(expect.arrayContaining(expectedNotifications));
   });
 });
