@@ -21,7 +21,7 @@ export function getAllNotificationsByUser(userId) {
       notifications.push(messages[allNotifications[key].context]);
     }
   }
-
+  console.log(notifications);
   return notifications;
 }
 
