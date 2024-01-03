@@ -1,21 +1,21 @@
-# React component
+# React props
+
 ## Resources
-* [React components](https://legacy.reactjs.org/docs/react-component.html)
+* [React Official Website](https://react.dev/)
+* [Getting started with React](https://www.taniarascia.com/getting-started-with-react/)
+* [React overview](https://react.dev/learn)
 * [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-* [Enzyme Shallow](https://enzymejs.github.io/enzyme/docs/api/shallow.html)
-* [Enzyme Mount](https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/mount.html)
-* [Enzyme Unmount](https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/unmount.html)
-* [React Pure components](https://legacy.reactjs.org/docs/react-api.html)
-* [React Higher Order Components](https://legacy.reactjs.org/docs/higher-order-components.html)
-* [Jest mock function](https://jestjs.io/docs/jest-object)
+* [Enzyme](https://enzymejs.github.io/enzyme/docs/api/shallow.html)
+* [React Fragments](https://react.dev/reference/react/Fragment#fragment)
+* [Typechecking with PropTypes](https://react.dev/reference/react/Component#static-proptypes)
 
 ## Learning Objectives
-* When to use a Class or a function to create a component
-* The lifecycle of a Class component
-* How to test a component
-* How to utilize a Jest spy to verify that a function is being called correctly
-* What an HOC is and how to use it
-* How to optimize performance and control which components to render
+* How to create basic React components using functions
+* How to reuse components
+* How to pass properties to components
+* How to define types for components
+* How to use Fragments
+* When to use a key to improve a loop’s performance
 
 ## Requirements
 * Ubuntu 18.04 LTS

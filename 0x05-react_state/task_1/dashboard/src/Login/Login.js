@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import WithLogging from '../HOC/WithLogging';
 
-function Login() {
+export default function Login() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -95,7 +94,3 @@ const styles = StyleSheet.create({
     cursor: 'pointer',
   },
 })
-
-const LoginWithLogging = WithLogging(Login);
-
-export { Login, LoginWithLogging };

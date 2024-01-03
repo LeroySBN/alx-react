@@ -2,6 +2,10 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Notifications from './Notifications';
 import NotificationItem from './NotificationItem';
+import { StyleSheetTestUtils } from 'aphrodite';
+beforeEach(() => {
+  StyleSheetTestUtils.suppressStyleInjection();
+});
 
 
 describe('Notifications component testing', () => {

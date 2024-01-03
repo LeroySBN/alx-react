@@ -2,7 +2,6 @@ import React from "react";
 import { shallow, mount } from "enzyme";
 import NotificationItem from "./NotificationItem";
 import { StyleSheetTestUtils } from 'aphrodite';
-import { StyleSheetTestUtils } from "aphrodite";
 
 beforeEach(() => {
   StyleSheetTestUtils.suppressStyleInjection();
