@@ -1,12 +1,12 @@
 import { bindActionCreators, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
+import thunkMiddleware from 'redux-thunk';
 import { useDispatch } from 'react-redux';
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 import configureStore from 'redux-mock-store'
 import { LOGIN, LOGOUT, DISPLAY_NOTIFICATION_DRAWER, HIDE_NOTIFICATION_DRAWER, LOGIN_SUCCESS, LOGIN_FAILURE } from "./uiActionTypes";
 
-const middlewares = [thunk] // add your middlewares like `redux-thunk`
-const mockStore = configureStore(middlewares)
+const composedEnhanders = applyMiddleware(thunkMiddleware)
+export const mockStore = configureStore(composedEnhanders)
 
 export const login = (email, password) => {
   return {
@@ -57,18 +57,6 @@ export const useUIActionCreators = () => {
     boundLoginFailure: bindActionCreators(loginFailure, dispatch),
   };
 };
-
-// export function loginRequest(email, password) {
-//   const dispatch = useDispatch();
-//   dispatch(login(email, password));
-//   const res = await fetch('http://localhost:8564/login-success.json');
-//   const data = await res.json();
-//   if (data.email === email) {
-//     dispatch(loginSuccess());
-//   } else {
-//     dispatch(loginFailure());
-//   }
-// }
 
 export function loginRequest(email, password) {
   return async (dispatch) => {

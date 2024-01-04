@@ -1,6 +1,5 @@
 import { LOGIN, LOGOUT, DISPLAY_NOTIFICATION_DRAWER, HIDE_NOTIFICATION_DRAWER } from "./uiActionTypes";
 import { login, logout, displayNotificationDrawer, hideNotificationDrawer, loginRequest } from "./uiActionCreators";
-import { fetchMock } from "fetch-mock";
 
 describe("Test uiActionCreators.js", () => {
     it("test login", () => {
@@ -25,12 +24,8 @@ describe("Test uiActionCreators.js", () => {
 
     it("test loginRequest", () => {
         const dispatch = jest.fn();
-        const email = "email";
-        const password = "password";
-        const mockStore = { ui: { isNotificationDrawerVisible: false } };
-        fetchMock.post("*", { body: { email, password } });
-        loginRequest(email, password)(dispatch, mockStore);
-        expect(dispatch).toHaveBeenCalledWith({ type: LOGIN, user: { email, password } });
-        fetchMock.restore();
+        const result = loginRequest("email", "password")(dispatch);
+        expect(result).toEqual(undefined);
+        expect(dispatch).toHaveBeenCalledWith({ type: LOGIN, user: { email: "email", password: "password" } });
     });
 });
