@@ -25,7 +25,7 @@ const listNotifications = [
   { id: 3, type: "urgent", html: getLatestNotification() },
 ];
 
-class App extends React.Component {
+export class App extends React.Component {
   constructor(props) {
     super(props);
 
@@ -140,11 +140,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const mapStateToProps = (state) => {
+export function mapStateToProps (state) {
   return {
-    isLoggedIn: state.get('isUserLoggedIn'),
+    isLoggedIn: state.ui.isUserLoggedIn,
   };
 }
-connect(mapStateToProps, null)(App);
 
-export default App;
+export default connect(mapStateToProps, null)(App);

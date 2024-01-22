@@ -4,13 +4,13 @@
 
 import React from 'react';
 import { mount, shallow, render } from 'enzyme';
-import App from './App';
 import Notifications from '../Notifications/Notifications';
 import Header from '../Header/Header';
 import { Login }  from '../Login/Login';
 import Footer from '../Footer/Footer';
 import { StyleSheetTestUtils } from "aphrodite";
 import { AppContext } from './AppContext';
+import { mapStateToProps, App } from './App';
 
 let component;
 
@@ -150,5 +150,24 @@ describe("markNotificationAsRead works as intended", () => {
     expect(wrapper.state().listNotifications[3]).toBe(undefined);
 
     wrapper.unmount();
+  });
+});
+
+describe('Test MapStateToProps', () => {
+  it('verifies that when isLoggedIn is true, the Login component is not included', () => {
+    const state = {
+      ui: {
+        isNotificationDrawerVisible: false,
+        isUserLoggedIn: true,
+        user: {
+          email: '',
+          password: '',
+          isLoggedIn: true,
+        },
+      },
+    };
+
+    const result = mapStateToProps(state);
+    expect(result).toEqual({ isLoggedIn: true });
   });
 });
